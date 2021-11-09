@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Facultad de Ciencias Fisico Matematicas</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+  <ion-title>Carreras</ion-title> 
+  <ion-grid>
+    <ion-row  *ngFor="let carrera of carreras">
+      <ion-col>
+      <ion-card (click)="audio(carrera)">
+        <ion-title color="primary" >{{carrera.nombre}}</ion-title>
+         <ion-img (click)="Alerta(carrera)" [src]= "carrera.imagen" ></ion-img>
+       </ion-card>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

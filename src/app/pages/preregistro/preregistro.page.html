@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Facultad de Ciencias Fisico Matematicas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h1>Te interesa nuestra facultad?</h1>
+  <form action="/my-handling-form-page" method="post">
+    <p>Ingresa tu datos y te mandaremos a tu correo la informacion de la carrera </p>
+    <fieldset>
+      <legend>Informacion De contacto</legend>
+      <ul>
+        <li>
+          <ion-label>Nombre:</ion-label>
+          <input [(ngModel)]="Nombre" type="text" id="name" name="Nombre" placeholder="Nombre y Apellido">
+        </li>
+        <li>
+          <ion-label>Correo Electrónico</ion-label>
+          <input [(ngModel)]="Correo" type="email" id="mail" name="correo" placeholder="correo@ejemplo.com">
+        </li>
+        <li>
+          <p><b>Licenciatura de interes: </b>
+            <select [(ngModel)]="Carrera" name="carrera">
+              <option>Seleccione una opcion</option>
+              <option>Matematicas</option>
+              <option>Fisica</option>
+              <option>Ciencias Computacionales</option>
+              <option>Animacion digital</option>
+              <option>Actuaria</option>
+              <option>Seguridad en Informatica</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          <p><b>Pertenece a la UANL actualmente: </b>
+          <ion-label><input type="radio"  value="Si"> Si</ion-label>
+          <ion-label><input type="radio"  value="No"> No</ion-label>
+        </p>
+        </li>
+      </ul>
+    </fieldset>
+    <p for="msg"><b>Tienes alguna duda o comentario respecto a las carreras? háznoslo saber:</b></p>
+       <textarea [(ngModel)]="Comment" id="msg" name="user_message" style="color:#000"></textarea>
+       <p><ion-button (click)="submit()" type="submit" expand="block">
+        Enviar
+      </ion-button>
+       <p></p>
+       <p></p>
+       <FONT SIZE=2>En el transcurso de los proximos dias habiles recibiras un correo con 
+           la informacion respecto a tu carrera</FONT>
+  </form>
+  
+</ion-content>
